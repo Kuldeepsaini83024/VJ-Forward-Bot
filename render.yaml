@@ -1,0 +1,15 @@
+services:
+  - type: web
+    name: VJ-Forward-Bot
+    env: python
+    plan: free
+    buildCommand: "pip install -r requirements.txt"
+    startCommand: "python main.py"
+    repo: https://github.com/YourRepo/VJ-Forward-Bot
+    envVars:
+      - key: BOT_TOKEN
+        sync: false
+      - key: API_ID
+        sync: false
+      - key: API_HASH
+        sync: false
